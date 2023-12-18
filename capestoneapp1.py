@@ -37,7 +37,7 @@ from sklearn.model_selection import GridSearchCV
     # Defining data processing function
 def process_data(product_sales_data):
         
-        dollar = pd.read_csv("/Users/aminghobar/Desktop/MSBA Summer 2023/Capstone/Data/usd-lbp.csv")
+        dollar = pd.read_csv("usd-lbp.csv")
 
         file_path = product_sales_data
         # Read product sales data
