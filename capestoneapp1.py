@@ -665,7 +665,7 @@ if menu_id == 'Data Processing Tool':
 
 ########################################################################################################################################################################
 
-df= pd.read_csv("/Users/aminghobar/Desktop/MSBA Summer 2023/Capstone/Capstone Data Main/Mahfouz Fixed Data1.csv")
+df= pd.read_csv("Mahfouz Fixed Data1.csv")
 if menu_id == 'Forecasting Tool':
     st.markdown("<h1 style='text-align: center;'>Demand Forecast</h1>", unsafe_allow_html=True)
 
