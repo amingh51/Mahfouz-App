@@ -561,7 +561,7 @@ def img_to_bytes(img_path):
 
 
 # Add your image above the menu bar
-image_path = "/Users/aminghobar/Desktop/MSBA Summer 2023/Capstone/Unknown.png"  # Replace with the actual path to your image
+image_path = "Unknown.png"  # Replace with the actual path to your image
 left,middle,right = st.columns((1,1,1))
 
 with middle:
