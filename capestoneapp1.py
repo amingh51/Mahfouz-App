@@ -668,7 +668,7 @@ if menu_id == 'Data Processing Tool':
 df= pd.read_csv("Mahfouz Fixed Data1.csv")
 if menu_id == 'Forecasting Tool':
     # Convert the 'Date' column to datetime type
-    df['Date'] = pd.to_datetime(df['Date'])
+    df['Date'] = pd.to_datetime(df['Date'], format='%d-%m-%Y')
     st.markdown("<h1 style='text-align: center;'>Demand Forecast</h1>", unsafe_allow_html=True)
 
     # Display Forecast Options based on user selection
