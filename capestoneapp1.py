@@ -670,7 +670,7 @@ if menu_id == 'Forecasting Tool':
     # Convert the 'Date' column to datetime type
     # Change the format of the 'Date' column to month-day-year ("%m-%d-%Y")
     df['Date'] = df['Date'].str.split('/').apply(lambda x: f"{x[1]}-{x[0]}-{x[2]}")
-    df['Date'] = pd.to_datetime(df['Date'], format='%d-%m-%Y')
+    df['Date'] = pd.to_datetime(df['Date'])
     st.markdown("<h1 style='text-align: center;'>Demand Forecast</h1>", unsafe_allow_html=True)
 
     # Display Forecast Options based on user selection
