@@ -668,7 +668,8 @@ if menu_id == 'Data Processing Tool':
 df= pd.read_csv("Mahfouz Fixed Data1.csv")
 if menu_id == 'Forecasting Tool':
     # Convert the 'Date' column to datetime type
-    df['Date'] = df['Date'].strftime('%m-%d-%Y')
+    # Change the format of the 'Date' column to month-day-year ("%m-%d-%Y")
+    df['Date'] = df['Date'].str.split('-').apply(lambda x: f"{x[1]}-{x[0]}-{x[2]}")
     df['Date'] = pd.to_datetime(df['Date'], format='%d-%m-%Y')
     st.markdown("<h1 style='text-align: center;'>Demand Forecast</h1>", unsafe_allow_html=True)
 
