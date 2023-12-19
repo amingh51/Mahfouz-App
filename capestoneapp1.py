@@ -650,8 +650,6 @@ if menu_id == 'Data Processing Tool':
             # Call the data processing function with the uploaded product sales file and dollar rate data
             processed_data = process_data(product_sales_data)
 
-            # Store processed_data in session state
-            st.session_state.processed_data = processed_data
 
             # Display the processed data
             st.subheader('Processed Data:')
@@ -661,6 +659,9 @@ if menu_id == 'Data Processing Tool':
             # Download link for processed data
             csv_file = processed_data.to_csv(index=False)
             st.markdown(get_csv_download_link(csv_file), unsafe_allow_html=True)
+
+            # Store processed_data in session state
+            st.session_state.processed_data = processed_data
 
 
 ########################################################################################################################################################################
