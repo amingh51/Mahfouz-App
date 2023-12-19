@@ -295,7 +295,7 @@ def process_data(product_sales_data):
         product_sales_dollar['year'] = product_sales_dollar['Date'].dt.year
         product_sales_dollar['dayofyear'] = product_sales_dollar['Date'].dt.dayofyear
         product_sales_dollar['dayofmonth'] = product_sales_dollar['Date'].dt.day
-        # Assuming the week numbering starts from 1
+        # adding week of year numbering
         product_sales_dollar['weekofyear'] = product_sales_dollar['Date'].dt.isocalendar().week  
 
         ## Adding holiday columns
